@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ipark-client/static/css/main.d1b05096.chunk.css",
+    "main.js": "/ipark-client/static/js/main.c3eb82a6.chunk.js",
+    "main.js.map": "/ipark-client/static/js/main.c3eb82a6.chunk.js.map",
+    "runtime-main.js": "/ipark-client/static/js/runtime-main.da096f54.js",
+    "runtime-main.js.map": "/ipark-client/static/js/runtime-main.da096f54.js.map",
+    "static/css/2.47e06e2e.chunk.css": "/ipark-client/static/css/2.47e06e2e.chunk.css",
+    "static/js/2.610f02be.chunk.js": "/ipark-client/static/js/2.610f02be.chunk.js",
+    "static/js/2.610f02be.chunk.js.map": "/ipark-client/static/js/2.610f02be.chunk.js.map",
+    "index.html": "/ipark-client/index.html",
+    "precache-manifest.492fc4b78b5ee1980279c6e14ee40c60.js": "/ipark-client/precache-manifest.492fc4b78b5ee1980279c6e14ee40c60.js",
+    "service-worker.js": "/ipark-client/service-worker.js",
+    "static/css/2.47e06e2e.chunk.css.map": "/ipark-client/static/css/2.47e06e2e.chunk.css.map",
+    "static/css/main.d1b05096.chunk.css.map": "/ipark-client/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.610f02be.chunk.js.LICENSE": "/ipark-client/static/js/2.610f02be.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.da096f54.js",
+    "static/css/2.47e06e2e.chunk.css",
+    "static/js/2.610f02be.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.c3eb82a6.chunk.js"
+  ]
+}

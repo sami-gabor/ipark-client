@@ -5,7 +5,7 @@ import NonSpotOwner from './NonSpotOwner';
 
 class Home extends Component {
     render() {
-        const hasParkingSpot = true;
+        const hasParkingSpot = false;
 
         return hasParkingSpot ? <SpotOwner /> : <NonSpotOwner />;
     }

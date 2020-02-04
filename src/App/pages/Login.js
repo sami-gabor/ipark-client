@@ -20,7 +20,7 @@ class Login extends Component {
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" placeholder="Enter password" />
             </Form.Group>
-            <p className="text-center">Not a member yet? Register <a href="http://localhost:3000/register">here</a>.</p>
+            <p className="text-center">Not a member yet? Register <a href="/register">here</a>.</p>
             <div className="text-center mt-5">
               <Link to={'./login'}>
                 <Button variant="primary" type="submit">Login</Button>

@@ -5,7 +5,7 @@
   "short_name": "iPark",
   "description": "Can I book my spot",
   "display": "standalone",
-  "start_url": "/?utm_source=homescreen",
+  "start_url": "https://samontech.eu",
   "lang": "en-US",
   "icons": [
     {

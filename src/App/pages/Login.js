@@ -27,7 +27,6 @@ class Login extends Component {
               </Link>
             </div>
           </Form>
-          test shell
         </div>
       </div>
     );

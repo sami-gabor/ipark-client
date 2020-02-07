@@ -24,9 +24,9 @@ class Register extends Component {
             <Form.Label>Confirm Password</Form.Label>
             <Form.Control type="password" placeholder="Re-enter password" />
           </Form.Group>
-          <p className="text-center">Already a member? Login <a href="/login">here</a>.</p>
+          <p className="text-center">Already a member? Login <Link to="/login">here.</Link></p>
           <div className="text-center mt-5">
-            <Link to={'./register'}>
+            <Link to={'./login'}>
               <Button variant="primary" type="submit">Register</Button>
             </Link>
           </div>

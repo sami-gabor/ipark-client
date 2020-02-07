@@ -15,6 +15,7 @@ class App extends Component {
           <Route path='/register' component={Register}/>
           <Route path='/home' component={Home}/>
         </Switch>
+        yugyu
       </div>
     )
     return (

@@ -18,9 +18,9 @@ class App extends Component {
       </div>
     )
     return (
-      <Switch>
+      // <Switch>
         <App/>
-      </Switch>
+      // </Switch>
     );
   }
 }

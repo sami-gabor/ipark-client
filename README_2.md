@@ -132,8 +132,6 @@ as sami:
 ```
     sudo su sami
     pm2 stop all
-    cd ~
-    cd 
     cd ipark-client/
     git pull
     npm run build

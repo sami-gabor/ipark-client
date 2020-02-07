@@ -145,3 +145,6 @@ as sami:
 [I built a PWA and published it in 3 app stores. Here’s what I learned.](http://debuggerdotbreak.judahgabriel.com/2018/04/13/i-built-a-pwa-and-published-it-in-3-app-stores-heres-what-i-learned/)
 [Progressive Web Apps on iOS are here](https://medium.com/@firt/progressive-web-apps-on-ios-are-here-d00430dee3a7)
 [hnpwa](https://hnpwa.com/)
+[Progressive Web App Checklist](https://developers.google.com/web/progressive-web-apps/checklist)
+[Icons Generator](https://realfavicongenerator.net/)
+[Introduction to Progressive Web Apps (Push Notifications) - Part 3](https://auth0.com/blog/introduction-to-progressive-web-apps-push-notifications-part-3/)

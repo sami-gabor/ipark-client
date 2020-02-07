@@ -49,3 +49,7 @@ systemctl enable nginx
 cd /etc/nginx/
 cp /root/conf.d/samontech.eu.conf .
 
+
+
+yum -y install certbot
+

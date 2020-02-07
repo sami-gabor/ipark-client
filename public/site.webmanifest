@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "iQuest Parking",
+    "short_name": "iPark",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -10,6 +10,11 @@
         {
             "src": "/android-chrome-256x256.png",
             "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "logo512.png",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ],

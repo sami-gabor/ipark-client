@@ -4,6 +4,8 @@ import '../App.css';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Home from './pages/Home';
+import PrivateRoute from './pages/PrivateRoute';
+
 
 class App extends Component {
   render() {
@@ -14,7 +16,9 @@ class App extends Component {
             <Route exact path='/' component={Login}/>
             <Route path='/login' component={Login}/>
             <Route path='/register' component={Register}/>
-            <Route path='/home' component={Home}/>
+            <PrivateRoute path='/home'>
+              <Home />
+            </PrivateRoute>
           </Switch>
         </BrowserRouter>
       </div>

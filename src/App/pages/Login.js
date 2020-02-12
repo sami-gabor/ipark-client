@@ -2,6 +2,29 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import axios from 'axios';
+
+const username = 'admina';
+const password = '123';
+
+
+const auth = async () => {
+  try {
+    const res = await axios.get('http://localhost:5000/authenticate', { auth: { username, password } });
+
+    console.log('res', res);
+    
+    if (res.data.screen !== undefined) {
+      // setScreen(res.data.screen);
+      console.log('res.data.screen', res.data.screen);
+      
+    }
+  } catch (e) {
+    console.log(e);
+  }
+  console.log('auth...');
+  
+};
 
 
 class Login extends Component {
@@ -23,7 +46,7 @@ class Login extends Component {
             <p className="text-center">Not a member yet? Register <Link to="/register">here.</Link></p>
             <div className="text-center mt-5">
               <Link to={'/home'}>
-                <Button variant="primary" type="submit">Login</Button>
+                <Button onClick={auth} variant="primary" type="submit">Login</Button>
               </Link>
             </div>
           </Form>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
+// import axios from 'axios';
 
 class List extends Component {
   // Initialize the state
@@ -12,15 +13,16 @@ class List extends Component {
 
   // Fetch the list on first mount
   componentDidMount() {
-    this.getList();
+    // this.getList();
+    console.log('List componentDidMount');
   }
 
   // Retrieves the list of items from the Express app
-  getList = () => {
-    fetch('http://localhost:5000/api/getList')
-    .then(res => res.json())
-    .then(list => this.setState({ list }))
-  }
+  // getList = () => {
+  //   fetch('http://localhost:5000')
+  //   .then(res => res.json())
+  //   .then(list => this.setState({ list }))
+  // }
 
   render() {
     const { list } = this.state;

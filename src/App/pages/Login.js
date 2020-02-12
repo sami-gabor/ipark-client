@@ -46,7 +46,7 @@ class Login extends Component {
             <p className="text-center">Not a member yet? Register <Link to="/register">here.</Link></p>
             <div className="text-center mt-5">
               <Link to={'/home'}>
-                <Button onClick={auth} variant="primary" type="submit">Login</Button>
+                <Button variant="primary" type="submit">Login</Button>
               </Link>
             </div>
           </Form>

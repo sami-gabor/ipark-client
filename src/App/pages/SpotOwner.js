@@ -9,10 +9,14 @@ class SpotOwner extends Component {
             <div className="container">
                 <div className="text-center">
                     <Button variant="info" type="submit">I don't need my spot today</Button>
+                    <div className="text-center mt-5">
+                        <Button onClick={this.props.deleteCookie} variant="primary" type="submit">Logout</Button>
+                    </div>
                 </div>
             </div>
         </div>
         );
     }
 }
+
 export default SpotOwner;

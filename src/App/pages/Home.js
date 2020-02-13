@@ -7,7 +7,10 @@ class Home extends Component {
     render() {
         const hasParkingSpot = false;
 
-        return hasParkingSpot ? <SpotOwner /> : <NonSpotOwner />;
+        return hasParkingSpot 
+            ? <SpotOwner deleteCookie={this.props.deleteCookie} /> 
+            : <NonSpotOwner deleteCookie={this.props.deleteCookie} />
     }
 }
+
 export default Home;

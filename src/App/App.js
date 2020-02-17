@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import '../App.css';
 import Login from './pages/Login';
 import Home from './pages/Home';
@@ -9,52 +8,54 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      screen: 'auth',
-      username: '',
+      screen: 'authPage',
+      email: '',
       password: ''
     }
   }
 
-  auth = async () => {
-    try {
-      const res = await axios.get('http://localhost:5000/authenticate', {
-        auth: { 
-          username: this.state.username, 
-          password: this.state.password 
-        }
-      });
-      
-      if (res.data.screen !== undefined) {
-        this.setState({ screen: res.data.screen });
-      }
-    } catch(e) {
-      console.log(e);
-    }
+  authenticate = async (e) => {
+    e.preventDefault();
+    
+    fetch('http://localhost:5000/authenticate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: this.state.email,
+        password: this.state.password
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      this.setState({screen: data.screen});
+    })
+    .catch(e => console.log('Got this error: ', e))
   }
 
   readCookie = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/read-cookie');
+      const res = await fetch('http://localhost:5000/read-cookie');
       
       if (res.data.screen !== undefined) {
         this.setState({ screen: res.data.screen });
       }
     } catch (e) {
-      this.setState({ screen: 'auth' });
+      this.setState({ screen: 'authPage' });
+      console.log(e);
     }
   };
 
   deleteCookie = async () => {
     try {
-      await axios.get('http://localhost:5000/clear-cookie');
-      this.setState({ screen: 'auth' });
+      await fetch('http://localhost:5000/clear-cookie');
+      this.setState({ screen: 'authPage' });
     } catch (e) {
       console.log(e);
     }
   }
 
-  setUsername = (username) => {
-    this.setState({ username });
+  setEmail = (email) => {
+    this.setState({ email });
   }
 
   setPassword = (password) => {
@@ -69,11 +70,11 @@ class App extends Component {
     return (
       <div>
         {
-          this.state.screen === 'auth'
+          this.state.screen === 'authPage'
             ? <Login 
-                setUsername={this.setUsername}
+                setEmail={this.setEmail}
                 setPassword={this.setPassword}
-                auth={this.auth}
+                auth={this.authenticate}
               />
             : <Home 
                 screen={this.state.screen} 

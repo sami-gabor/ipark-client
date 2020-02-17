@@ -15,7 +15,7 @@ class Login extends Component {
               <Form.Control 
                 type="text" 
                 placeholder="Enter email" 
-                onChange={e => this.props.setUsername(e.target.value)} 
+                onChange={e => this.props.setEmail(e.target.value)} 
               />
             </Form.Group>
 
@@ -30,7 +30,7 @@ class Login extends Component {
             <p className="text-center">Not a member yet? Register <a href="/register">here.</a> </p>
             <div className="text-center mt-5">
               {/* doesn't work with type submit !!! */}
-              <Button onClick={this.props.auth} variant="primary" type="button">Login</Button>
+              <Button onClick={this.props.auth} variant="primary" type="submit">Login</Button>
             </div>
           </Form>
         </div>

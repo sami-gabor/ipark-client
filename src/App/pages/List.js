@@ -1,28 +1,20 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
-// import axios from 'axios';
+
 
 class List extends Component {
-  // Initialize the state
   constructor(props){
     super(props);
     this.state = {
-      list: [1, 2, 3]
+      list: []
     }
   }
 
-  // Fetch the list on first mount
   componentDidMount() {
-    // this.getList();
-    console.log('List componentDidMount');
+    fetch('http://localhost:5000/parking-spots')
+      .then(res => res.json())
+      .then(data => this.setState({ list: data.list }))
   }
-
-  // Retrieves the list of items from the Express app
-  // getList = () => {
-  //   fetch('http://localhost:5000')
-  //   .then(res => res.json())
-  //   .then(list => this.setState({ list }))
-  // }
 
   render() {
     const { list } = this.state;
